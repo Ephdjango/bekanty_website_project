@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Logo-->
+    <link rel="shortcut icon" href="{% static 'assets/Logo/logo.png' %}">
+
+<!--Boxicons-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<!--Main css-->
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <title>Bekanty Lodge|Administrateur</title>
+</head>
+<body>
+    <div class="admin-sidebar">
+        <div class="admin-logo">
+            <ul class="admin-menu">
+                <!--Sidebar item01-->
+                <li class="active">
+                    <a href="#" >
+                        <i class="bx bxs-dashboard"></i>
+                        <span>Tableau de Bord</span>
+                    </a>
+                </li>
+                <!--Sidebar item02-->
+                <li>
+                    <a href="#">
+                        <i class="bx bx-pie-chart" ></i>
+                        <span>Statistiques</span>
+                    </a>
+                </li>
+                <!--Sidebar item03-->
+                <li>
+                    <a href="#">
+                        <i class="bx bx-cog" ></i>
+                        <span>Paramètre</span>
+                    </a>
+                </li>
+                <br><br><br><br>
+                <!--Sidebar item04-->
+                <li class="logout">
+                    <a href="{% url 'accueil' %}">
+                        <i class="bx bx-log-out" ></i>
+                        <span>Vers La Page Web</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+        <!--Content Header-->
+    <div class="main-content">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="#" class="logo">
+                    <img src="{% static 'assets/Logo/logo.png' %}" alt="" width="30%">
+                </a>
+            </div>
+
+
+<!--Logo-->
+
+
+        </div>
+
+            <!--Content cards  -->
+        <div class="admin-card-container">
+            <h3 class="admin-cards-title">RESERVATION</h3>
+            <div class="admin-card-wrapper">
+                <!--card item 1-->
+                <div class="admin-payment-card">
+                    <div class="admin-card-header">
+                        <div class="amount">
+                            <span class="amount-card-title">TOTAL RESERVATION</span>
+                            <span class="amount-card-value">10.000 F cfa</span>
+                        </div>
+                        <i class="bx bx-credit-card-front"></i>
+                    </div>
+
+                    <span class="card-detail">**** **** **** 3484</span>
+
+                </div>
+                <!--card item 2-->
+                <div class="admin-payment-card">
+                    <div class="admin-card-header">
+                        <div class="amount">
+                            <span class="amount-card-title">lorem dolor</span>
+                            <span class="amount-card-value">10.000 F cfa</span>
+                        </div>
+                        <i class="bx bx-credit-card-front"></i>
+                    </div>
+
+                    <span class="card-detail">**** **** **** 3484</span>
+
+                </div>
+                <!--card item 3-->
+                <div class="admin-payment-card">
+                    <div class="admin-card-header">
+                        <div class="amount">
+                            <span class="amount-card-title">lorem dolor</span>
+                            <span class="amount-card-value">10.000 F cfa</span>
+                        </div>
+                        <i class="bx bx-credit-card-front"></i>
+                    </div>
+
+                    <span class="card-detail">**** **** **** 3484</span>
+
+                </div>
+                <!--card item 3-->
+                <div class="admin-payment-card">
+                    <div class="admin-card-header">
+                        <div class="amount">
+                            <span class="amount-card-title">lorem dolor</span>
+                            <span class="amount-card-value">10.000 F cfa</span>
+                        </div>
+                        <i class="bx bx-credit-card-front"></i>
+                    </div>
+
+                    <span class="card-detail">**** **** **** 3484</span>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="admin-table-wrapper">
+            <h3 class="admin-table-title">LISTE CLIENTS</h3>
+            <div class="admin-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom & Pénoms</th>
+                            <th>N° Cni/Passeport</th>
+                            <th>Numéro de Téléphone</th>
+                            <th>Personne(s) Attendue(s)</th>
+                            <th>Date d'Entrée</th>
+                            <th>Date de Sortie</th>
+                        </tr>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    lorem dolor
+                                </td>
+                                <td>
+                                    lorem dolor
+                                </td>
+                                <td>
+                                    lorem dolor
+                                </td>
+                                <td>
+                                    lorem dolor
+                                </td>
+                                <td>
+                                    lorem dolor
+                                </td>
+                                <td>
+                                    lorem dolor
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6"></td>
+                            </tr>
+                        </tfoot>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

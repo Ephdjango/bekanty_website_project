@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Logo-->
+    <link rel="shortcut icon" href="{% static 'assets/Logo/logo.png' %}">
+    <!--main-->
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+    <!--Boxicons-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+     <link href="{% static 'css/boxicons-2.1.4.min.css' %}" rel="stylesheet">
+    <title>Bekanty Lodge|Reservation</title>
+</head>
+<body>
+    <div class="container box">
+        <header>
+            <a href="{% url 'accueil' %}" class="logo">
+                <img src="{% static 'assets/Logo/logo.png' %}" alt="" width="20%">
+            </a>
+            
+            <br>
+            Formulaire de Reservation 
+            <a href="{% url 'accueil' %}">
+                <i class="bx bx-log-out-circle" style="font-size: 28px; float: right; cursor: pointer;"></i>
+            </a>
+        </header>
+        <br>
+        <p style="text-align:center; color:var(--main-color); font-weight:bold">{{ message }}</p>
+        <form action="/sending_data_page/" method="post">
+
+            {% csrf_token %}
+            <div class="inputBox">
+                <input type="text" name="name1" value="" required onkeyup="this.setAttribute('value', this.value);">
+                <label for="name">Veuillez Saisir Votre Nom & Prénoms</label>
+                
+            </div>
+
+            <div class="inputBox">
+                <input type="text" name="cni1" value="" required onkeyup="this.setAttribute('value', this.value);">
+                <label for="cni">Veuillez Saisir Le Numéro de Votre Pièce CNI ou Passeport</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" name="phone1" value="" required onkeyup="this.setAttribute('value', this.value);">
+                <label for="phone">Entrer Votre Numéro de Téléphone</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" name="person1" value="" required onkeyup="this.setAttribute('value', this.value);">
+                <label for="person">Nombre De Personne </label>
+            </div>
+
+            <div class="inputBox">
+                <input type="datetime-local" name="enter_date1" required value="" onkeyup="this.setAttribute('value', this.value);">
+                <label for="enter_date">Date d'Entrée</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="datetime-local" name="exit_date1" required value="" onkeyup="this.setAttribute('value', this.value);">
+                <label for="exit_date">Date de Sortie</label>
+            </div>
+
+            <div>
+
+                <button class="btn" type="submit">Confirmer Votre Réservation</button>
+
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>

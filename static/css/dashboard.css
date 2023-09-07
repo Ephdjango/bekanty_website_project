@@ -1,0 +1,203 @@
+/**Google Fonts **/
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700);
+
+:root {
+    --main-color: rgb(253, 158, 33);
+    --second-color: hsl(46, 100%, 71%);
+    --trhird-color: #efefefab;
+    --text-color: #314862;
+    --bg-color: #fff;
+    --header-height: 3.5rem;
+    --gradient: linear-gradient(rgb(253, 158, 33), hsl(46, 100%, 71%));
+    /**Box Shadow **/
+    --box-shadow: 2px 2px 18px rgb(14 52 54 / 15%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{display: flex;}
+
+.admin-sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: var(--trhird-color);
+}
+.admin-sidebar:hover{
+    width: 270px;
+    transition: 1.6s;
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.admin-menu{
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.admin-menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.admin-menu li:hover, .active{
+    background: var(--second-color);
+}
+.admin-menu a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.admin-menu a span{overflow: hidden;}
+.admin-menu a i{font-size: 1.15rem;}
+.logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.main-content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--second-color);
+    border-radius: 10px;
+    padding: 10px 2rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1rem;
+}
+.header-title {
+    color: var(--text-color);
+}
+
+h2{margin: 0 auto}
+
+/* ==============CARD ================================ */
+.admin-card-container{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+}
+.admin-card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.admin-cards-title{
+    color: var(--main-color);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.admin-payment-card{
+    background: var(--trhird-color);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.admin-payment-card:hover{transform: translateY(-5px);}
+.admin-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.amount-card-title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.amount-card-value{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.admin-card-header i{
+    color: #000;
+    padding: 1rem;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--second-color);
+    font-size: 1.5rem;
+}
+.card-detail{
+    font-size: 18px;
+    color: #777;
+    letter-spacing: 2px;
+}
+.admin-table-title {
+    color: var(--main-color);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.admin-table-wrapper{
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.admin-table-container{width: 100%;}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background: var(--second-color);
+    color: var(--text-color);
+}
+tbody{background: #f2f2f2;}
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+tr:nth-child(even){
+    background: var(--bg-color);
+}
+tfoot{
+    background: var(--second-color);
+    font-weight: bold;
+    color: var(--bg-color);
+}
+tfoot td{padding: 15px;}
+.admin-table-container button{
+    color: var(--text-color);
+    background: none;
+    cursor: pointer;
+}
